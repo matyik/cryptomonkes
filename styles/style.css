@@ -355,7 +355,7 @@ nav .nav-links a:hover {
           animation: fadein 4s linear;
 }
 
-.hero button {
+button {
   -webkit-animation: fadein 6s linear;
           animation: fadein 6s linear;
   border: #eee 3px solid;
@@ -367,7 +367,7 @@ nav .nav-links a:hover {
   color: #eee;
 }
 
-.hero button:hover {
+button:hover {
   background-color: #eee;
   color: #000;
 }
@@ -475,5 +475,32 @@ nav .nav-links a:hover {
 .main .claim-monke {
   position: relative;
   margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .claim-monke .claim-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 4px solid #eee;
+  width: 40%;
+  -webkit-box-shadow: 0px 0px 10px #bb1919;
+          box-shadow: 0px 0px 10px #bb1919;
 }
 /*# sourceMappingURL=style.css.map */

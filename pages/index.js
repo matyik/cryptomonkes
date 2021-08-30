@@ -28,6 +28,11 @@ export default function Home() {
     observer.observe(rightbenefit.current)
   }, [])
 
+  const connectMetamask = async () => {
+    const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
+    const account = accounts[0]
+  }
+
   return (
     <>
       <Head>
@@ -110,6 +115,9 @@ export default function Home() {
         </div>
         <div className='claim-monke' id='claim'>
           <h2>Claim a Monke</h2>
+          <div className='claim-box'>
+            <button onClick={connectMetamask}>Connect Wallet</button>
+          </div>
         </div>
       </div>
     </>
