@@ -443,6 +443,10 @@ button:hover {
           animation: fadein-up 500ms linear;
 }
 
+.main .benefits .benefit-card ul {
+  margin-left: 1rem;
+}
+
 .main .benefits .benefit-card h3 {
   margin-bottom: 0.5rem;
 }

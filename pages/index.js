@@ -99,19 +99,17 @@ export default function Home() {
             </p>
           </div>
           <div className='benefit-card rightcard' ref={rightbenefit}>
-            <h3>NFT Giveaway</h3>
-            <p>
-              Once all 1,000 Monkes are claimed, a random Monke owner will win
-              this 1 of 1 Return to Monke NFT.
-            </p>
+            <h3>NFT Airdrops</h3>
+            <ul>
+              <li>
+                Once all 1,000 Monkes are claimed, a random Monke owner will win
+                this 1 of 1 Return to Monke NFT.
+              </li>
+              <li>
+                The first 5 wallets to own 5 Monkes will receive a something.
+              </li>
+            </ul>
           </div>
-        </div>
-        <div className='airdrop'>
-          <h3>NFT Airdrop</h3>
-          <p>
-            The first 5 wallets to own 5 Monkes will receive a random Monke NFT
-            Airdrop.
-          </p>
         </div>
         <div className='claim-monke' id='claim'>
           <h2>Claim a Monke</h2>
