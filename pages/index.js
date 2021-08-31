@@ -114,9 +114,16 @@ export default function Home() {
         <div className='claim-monke' id='claim'>
           <h2>Claim a Monke</h2>
           <div className='claim-box'>
+            <h3>Step 1</h3>
             <button onClick={connectMetamask}>Connect Wallet</button>
+            <h3>Step 2</h3>
+            <input type='text' placeholder='Email Address (optional)' />
+            <button>Claim Monke</button>
           </div>
         </div>
+        <footer>
+          Created by <a href='http://matyi.pro'>Matyi Kari</a>
+        </footer>
       </div>
     </>
   )
