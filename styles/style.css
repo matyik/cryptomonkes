@@ -373,6 +373,15 @@ button:hover {
   color: #000;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: #000;
+  color: #eee;
+}
+
 .slide-container {
   position: absolute;
   height: 100vh;
@@ -508,6 +517,19 @@ button:hover {
   padding-bottom: 1rem;
   -webkit-box-shadow: 0px 0px 10px #bb1919;
           box-shadow: 0px 0px 10px #bb1919;
+}
+
+.main .claim-monke .claim-box .status {
+  font-size: 10pt;
+  padding-top: 0.5rem;
+}
+
+.main .claim-monke .claim-box .status-red {
+  color: #bb1919;
+}
+
+.main .claim-monke .claim-box .status-green {
+  color: green;
 }
 
 .main .claim-monke .claim-box input {

@@ -224,6 +224,15 @@ button {
     background-color: #eee;
     color: #000;
   }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: #000;
+      color: #eee;
+    }
+  }
 }
 
 .slide-container {
@@ -325,6 +334,19 @@ button {
       width: 40%;
       padding-bottom: 1rem;
       box-shadow: 0px 0px 10px rgb(187, 25, 25);
+
+      .status {
+        font-size: 10pt;
+        padding-top: 0.5rem;
+
+        &-red {
+          color: rgb(187, 25, 25);
+        }
+
+        &-green {
+          color: green;
+        }
+      }
 
       input {
         background-color: #000;

@@ -1,13 +1,30 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import axios from 'axios'
 
 export default function Home() {
+  const [claimed, setClaimed] = useState(false)
+  const [status, setStatus] = useState(['', ''])
+  const [wallet, setWallet] = useState(null)
+  const [email, setEmail] = useState(null)
   const leftbenefit = useRef(null)
   const centerbenefit = useRef(null)
   const rightbenefit = useRef(null)
+
   useEffect(() => {
+    const claimStatus = localStorage.getItem('claimed')
+    setClaimed(claimStatus)
+    setStatus([
+      claimStatus === 'true'
+        ? 'Already claimed Monke!'
+        : window.ethereum
+        ? ''
+        : 'Please install Metamask, a crypto wallet for your browser.',
+      'status-red'
+    ])
+
     // Create the observer
     const observer = new IntersectionObserver((entries) => {
       // Loop over the entries
@@ -30,7 +47,24 @@ export default function Home() {
 
   const connectMetamask = async () => {
     const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-    const account = accounts[0]
+    setWallet(accounts[0])
+  }
+
+  const sendWallet = async () => {
+    if (wallet) {
+      try {
+        const res = await axios.post(
+          `/api/sendwallet?email=${email}&wallet=${wallet}`
+        )
+        setStatus([res.data.msg, res.data.color])
+        setClaimed(true)
+        localStorage.setItem('claimed', true)
+      } catch (err) {
+        setStatus(['An error occurred', 'status-red'])
+      }
+    } else {
+      setStatus(['Please connect to Metamask', 'status-red'])
+    }
   }
 
   return (
@@ -115,10 +149,19 @@ export default function Home() {
           <h2>Claim a Monke</h2>
           <div className='claim-box'>
             <h3>Step 1</h3>
-            <button onClick={connectMetamask}>Connect Wallet</button>
+            <button disabled={wallet} onClick={connectMetamask}>
+              {wallet ? wallet : 'Connect Wallet'}
+            </button>
             <h3>Step 2</h3>
-            <input type='text' placeholder='Email Address (optional)' />
-            <button>Claim Monke</button>
+            <input
+              type='email'
+              placeholder='Email Address (optional)'
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button disabled={claimed === 'true'} onClick={sendWallet}>
+              Claim Monke
+            </button>
+            <span className={`status ${status[1]}`}>{status[0]}</span>
           </div>
         </div>
         <footer>
