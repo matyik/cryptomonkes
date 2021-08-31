@@ -267,6 +267,7 @@ body {
   margin: 0;
   -webkit-transition: 200ms all;
   transition: 200ms all;
+  scroll-behavior: smooth;
 }
 
 nav {

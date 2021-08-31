@@ -114,7 +114,9 @@ export default function Home() {
           A collection of 1,000 unique, 1 of 1, randomly generated Monkes on the
           Polygon network.
         </p>
-        <button onClick={claim.current.scrollIntoView}>Claim a Monke</button>
+        <button onClick={() => claim.current.scrollIntoView()}>
+          Claim a Monke
+        </button>
       </div>
       <div className='main' id='owners'>
         <h2>Owner Benefits</h2>
