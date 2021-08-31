@@ -12,6 +12,7 @@ export default function Home() {
   const leftbenefit = useRef(null)
   const centerbenefit = useRef(null)
   const rightbenefit = useRef(null)
+  const claim = useRef(null)
 
   useEffect(() => {
     const claimStatus = localStorage.getItem('claimed')
@@ -113,7 +114,7 @@ export default function Home() {
           A collection of 1,000 unique, 1 of 1, randomly generated Monkes on the
           Polygon network.
         </p>
-        <button>Claim a Monke</button>
+        <button onClick={claim.current.scrollIntoView}>Claim a Monke</button>
       </div>
       <div className='main' id='owners'>
         <h2>Owner Benefits</h2>
@@ -145,7 +146,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className='claim-monke' id='claim'>
+        <div className='claim-monke' id='claim' ref={claim}>
           <h2>Claim a Monke</h2>
           <div className='claim-box'>
             <h3>Step 1</h3>
