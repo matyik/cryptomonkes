@@ -150,6 +150,14 @@ export default function Home() {
         </div>
         <div className='claim-monke' id='claim' ref={claim}>
           <h2>Claim a Monke</h2>
+          <p>
+            To make claiming fair, each wallet is allowed to claim one monke.
+            Monkes can be claimed for free. To claim, connect your wallet and
+            click &quot;Claim&quot;. You can enter your email, which will be
+            used to notify you when you are verified and your Monke has been
+            transferred. After they are claimed, they can be sold on the
+            secondary market.
+          </p>
           <div className='claim-box'>
             <h3>Step 1</h3>
             <button disabled={wallet} onClick={connectMetamask}>

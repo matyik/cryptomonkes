@@ -502,6 +502,13 @@ button:disabled:hover {
           align-items: center;
 }
 
+.main .claim-monke p {
+  width: 50%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: justify;
+}
+
 .main .claim-monke .claim-box {
   display: -webkit-box;
   display: -ms-flexbox;
