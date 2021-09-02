@@ -164,10 +164,11 @@ export default function Home() {
             </p>
           </div>
           <div className='benefit-card' ref={centerbenefit}>
-            <h3>Access to owners-only Discord server</h3>
+            <h3>Access to owners-only Discord channels</h3>
             <p>
-              Monke owners can join the Crypto Monkes Discord server, a place
-              where they can chat and keep in touch with the community.
+              Monke owners can join the Crypto Monkes Discord server and gain
+              access to owners-only channels, a place where they can chat and
+              keep in touch with the community.
             </p>
           </div>
           <div className='benefit-card rightcard' ref={rightbenefit}>
