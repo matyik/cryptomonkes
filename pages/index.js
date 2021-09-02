@@ -156,8 +156,11 @@ export default function Home() {
           <div className='benefit-card leftcard' ref={leftbenefit}>
             <h3>Access to owners-only website</h3>
             <p>
-              Monke owners get access to owners.cryptomonkes.com, where they can
-              vote on community decisions and more.
+              Monke owners get access to{' '}
+              <a href='https://owners.cryptomonkes.com'>
+                owners.cryptomonkes.com
+              </a>
+              , where they can vote on community decisions and more.
             </p>
           </div>
           <div className='benefit-card' ref={centerbenefit}>
@@ -205,6 +208,35 @@ export default function Home() {
               Claim Monke
             </button>
             <span className={`status ${status[1]}`}>{status[0]}</span>
+          </div>
+          <div className='links'>
+            <a href='https://discord.gg/fvN6meTF7d'>
+              <Image
+                src='/discord.svg'
+                alt='Discord'
+                title='Discord'
+                width='35'
+                height='35'
+              />
+            </a>
+            <a href='https://opensea.io/collection/monkescrypto'>
+              <Image
+                src='/opensea.svg'
+                alt='Opensea'
+                title='Opensea'
+                width='35'
+                height='35'
+              />
+            </a>
+            <a href='https://twitter.com/MonkesCrypto'>
+              <Image
+                src='/twitter.svg'
+                alt='Twitter'
+                title='Twitter'
+                width='35'
+                height='35'
+              />
+            </a>
           </div>
         </div>
         <footer>

@@ -463,6 +463,10 @@ button:disabled:hover {
   margin-left: 1rem;
 }
 
+.main .benefits .benefit-card a {
+  color: #eee;
+}
+
 .main .benefits .benefit-card h3 {
   margin-bottom: 0.5rem;
 }
@@ -560,6 +564,25 @@ button:disabled:hover {
 
 .main .claim-monke .claim-box h3 {
   margin: 1rem;
+}
+
+.main .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+  width: 50%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.main .links img {
+  cursor: pointer;
+}
+
+.main .links img:hover {
+  opacity: 0.5;
 }
 
 .main footer {

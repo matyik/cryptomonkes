@@ -306,6 +306,10 @@ button {
         margin-left: 1rem;
       }
 
+      a {
+        color: #eee;
+      }
+
       h3 {
         margin-bottom: 0.5rem;
       }
@@ -377,6 +381,21 @@ button {
 
       h3 {
         margin: 1rem;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    margin-top: 1rem;
+    width: 50%;
+    justify-content: space-evenly;
+
+    img {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
       }
     }
   }
