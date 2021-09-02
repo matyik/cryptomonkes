@@ -5,19 +5,19 @@
 
 @-webkit-keyframes slide {
   0% {
-    top: 100%;
+    top: -100%;
   }
   100% {
-    top: -200%;
+    top: 100%;
   }
 }
 
 @keyframes slide {
   0% {
-    top: 100%;
+    top: -100%;
   }
   100% {
-    top: -200%;
+    top: 100%;
   }
 }
 
@@ -357,6 +357,12 @@ nav .nav-links a:hover {
           animation: fadein 4s linear;
 }
 
+.hero .countdown {
+  font-size: 24pt;
+  font-family: BebasNeue;
+  text-shadow: 1px 1px 29px #bb1919;
+}
+
 button {
   -webkit-animation: fadein 6s linear;
           animation: fadein 6s linear;
@@ -387,7 +393,7 @@ button:disabled:hover {
   position: absolute;
   height: 100vh;
   overflow: hidden;
-  width: 100px;
+  width: 4%;
 }
 
 .slide-container .monkestrip {
@@ -400,6 +406,7 @@ button:disabled:hover {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  height: 100%;
   top: 100%;
 }
 
@@ -407,8 +414,6 @@ button:disabled:hover {
 .slide-container .right2 {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
-  -webkit-transform: translateY(12.75%);
-          transform: translateY(12.75%);
 }
 
 .slide-container .right1,

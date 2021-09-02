@@ -5,10 +5,10 @@
 
 @keyframes slide {
   0% {
-    top: 100%;
+    top: -100%;
   }
   100% {
-    top: -200%;
+    top: 100%;
   }
 }
 
@@ -209,6 +209,12 @@ nav {
   p {
     animation: fadein 4s linear;
   }
+
+  .countdown {
+    font-size: 24pt;
+    font-family: BebasNeue;
+    text-shadow: 1px 1px 29px rgb(187, 25, 25);
+  }
 }
 
 button {
@@ -240,7 +246,7 @@ button {
   position: absolute;
   height: 100vh;
   overflow: hidden;
-  width: 100px;
+  width: 4%;
 
   .monkestrip {
     position: absolute;
@@ -248,6 +254,7 @@ button {
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    height: 100%;
     top: 100%;
   }
 
@@ -258,7 +265,6 @@ button {
   .left2,
   .right2 {
     animation-delay: 3s;
-    transform: translateY(12.75%);
   }
 
   .right1,

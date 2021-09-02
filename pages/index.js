@@ -3,12 +3,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
+import Countdown from 'react-countdown'
 
 export default function Home() {
   const [claimed, setClaimed] = useState(false)
   const [status, setStatus] = useState(['', ''])
   const [wallet, setWallet] = useState(null)
   const [email, setEmail] = useState(null)
+  const [wHeight, setWHeight] = useState('0')
+  const [stripWidth, setStripWidth] = useState('0')
   const leftbenefit = useRef(null)
   const centerbenefit = useRef(null)
   const rightbenefit = useRef(null)
@@ -16,6 +19,8 @@ export default function Home() {
 
   useEffect(() => {
     const claimStatus = localStorage.getItem('claimed')
+    setWHeight(window.innerHeight)
+    setStripWidth(window.innerWidth / 25)
     setClaimed(claimStatus)
     setStatus([
       claimStatus === 'true'
@@ -68,6 +73,12 @@ export default function Home() {
     }
   }
 
+  const Completionist = () => (
+    <button onClick={() => claim.current.scrollIntoView()}>
+      Claim a Monke
+    </button>
+  )
+
   return (
     <>
       <Head>
@@ -84,25 +95,44 @@ export default function Home() {
           <span>Crypto Monkes</span>
         </span>
         <span className='nav-links'>
-          <Link href='#my'>My Monkes</Link>
           <Link href='#owners'>Owner Benefits</Link>
           <Link href='#claim'>Claim a Monke</Link>
         </span>
       </nav>
       <div className='slide-container left-slide'>
         <div className='monkestrip left1'>
-          <Image src='/monkes.png' alt='Monkes' width='100' height='1000' />
+          <Image
+            src='/monkes.png'
+            alt='Monkes'
+            width={stripWidth}
+            height={wHeight}
+          />
         </div>
         <div className='monkestrip left2'>
-          <Image src='/monkes.png' alt='Monkes' width='100' height='1000' />
+          <Image
+            src='/monkes.png'
+            alt='Monkes'
+            width={stripWidth}
+            height={wHeight}
+          />
         </div>
       </div>
       <div className='slide-container right-slide'>
         <div className='monkestrip right1'>
-          <Image src='/monkes.png' alt='Monkes' width='100' height='1000' />
+          <Image
+            src='/monkes.png'
+            alt='Monkes'
+            width={stripWidth}
+            height={wHeight}
+          />
         </div>
         <div className='monkestrip right2'>
-          <Image src='/monkes.png' alt='Monkes' width='100' height='1000' />
+          <Image
+            src='/monkes.png'
+            alt='Monkes'
+            width={stripWidth}
+            height={wHeight}
+          />
         </div>
       </div>
       <div className='hero'>
@@ -114,9 +144,11 @@ export default function Home() {
           A collection of 1,000 unique, 1 of 1, randomly generated Monkes on the
           Polygon network.
         </p>
-        <button onClick={() => claim.current.scrollIntoView()}>
-          Claim a Monke
-        </button>
+        <Countdown
+          className='countdown'
+          date={Date.parse('25 Sept 2021 00:15:00 MDT')}>
+          <Completionist />
+        </Countdown>
       </div>
       <div className='main' id='owners'>
         <h2>Owner Benefits</h2>
