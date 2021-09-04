@@ -83,6 +83,11 @@ export default function Home() {
     <>
       <Head>
         <title>Crypto Monkes</title>
+        <meta
+          name='description'
+          content='A collection of 1,000 unique, 1 of 1, randomly generated Monkes on the
+          Polygon network. Return to monke and claim one for free on September 25th!'
+        />
       </Head>
       <nav>
         <span className='logo'>
@@ -150,7 +155,7 @@ export default function Home() {
         </p>
         <Countdown
           className='countdown'
-          date={Date.parse('25 Sept 2021 00:15:00 MDT')}>
+          date={Date.parse('25 Sept 2021 00:15:00 MST')}>
           <Completionist />
         </Countdown>
       </div>
@@ -199,20 +204,26 @@ export default function Home() {
             secondary market.
           </p>
           <div className='claim-box'>
-            <h3>Step 1</h3>
-            <button disabled={wallet} onClick={connectMetamask}>
-              {wallet ? wallet : 'Connect Wallet'}
-            </button>
-            <h3>Step 2</h3>
-            <input
-              type='email'
-              placeholder='Email Address (optional)'
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button disabled={claimed === 'true'} onClick={sendWallet}>
-              Claim Monke
-            </button>
-            <span className={`status ${status[1]}`}>{status[0]}</span>
+            {Date.now() < Date.parse('25 Sept 2021 00:15:00 MST') ? (
+              'Claiming Starts September 25th'
+            ) : (
+              <>
+                <h3>Step 1</h3>
+                <button disabled={wallet} onClick={connectMetamask}>
+                  {wallet ? wallet : 'Connect Wallet'}
+                </button>
+                <h3>Step 2</h3>
+                <input
+                  type='email'
+                  placeholder='Email Address (optional)'
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <button disabled={claimed === 'true'} onClick={sendWallet}>
+                  Claim Monke
+                </button>
+                <span className={`status ${status[1]}`}>{status[0]}</span>
+              </>
+            )}
           </div>
           <div className='links'>
             <a href='https://discord.gg/fvN6meTF7d'>
