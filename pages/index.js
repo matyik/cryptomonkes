@@ -20,7 +20,7 @@ export default function Home() {
   useEffect(() => {
     const claimStatus = localStorage.getItem('claimed')
     setWHeight(window.innerHeight)
-    setStripWidth(window.innerWidth / 25)
+    setStripWidth(window.innerHeight / 10)
     setClaimed(claimStatus)
     setStatus([
       claimStatus === 'true'
@@ -99,7 +99,9 @@ export default function Home() {
           <Link href='#claim'>Claim a Monke</Link>
         </span>
       </nav>
-      <div className='slide-container left-slide'>
+      <div
+        className='slide-container left-slide'
+        style={{ width: `${stripWidth}px` }}>
         <div className='monkestrip left1'>
           <Image
             src='/monkes.png'
@@ -117,7 +119,9 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className='slide-container right-slide'>
+      <div
+        className='slide-container right-slide'
+        style={{ width: `${stripWidth}px` }}>
         <div className='monkestrip right1'>
           <Image
             src='/monkes.png'

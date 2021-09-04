@@ -1,0 +1,30 @@
+@media (max-width: 1000px) {
+  .hero {
+    p {
+      width: 75%;
+    }
+  }
+
+  .main {
+    .benefits {
+      flex-direction: column;
+      align-items: center;
+
+      .benefit-card {
+        transform: none !important;
+        max-width: 80vw !important;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .claim-monke {
+      p {
+        width: 80vw !important;
+      }
+
+      .claim-box {
+        width: 80vw !important;
+      }
+    }
+  }
+}

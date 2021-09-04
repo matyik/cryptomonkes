@@ -1,3 +1,4 @@
+@import 'mobile';
 @font-face {
   font-family: BebasNeue;
   src: url(BebasNeue-Regular.ttf);
@@ -169,6 +170,8 @@ nav {
   }
 
   .nav-links {
+    display: flex;
+
     a {
       margin-right: 1rem;
       text-decoration: none;
@@ -246,7 +249,6 @@ button {
   position: absolute;
   height: 100vh;
   overflow: hidden;
-  width: 4%;
 
   .monkestrip {
     position: absolute;
@@ -322,13 +324,6 @@ button {
     .rightcard {
       transform: perspective(800px) rotateY(-20deg) rotateX(2.5deg);
     }
-  }
-  .airdrop {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2rem;
   }
 
   .claim-monke {

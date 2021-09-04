@@ -1,3 +1,30 @@
+@media (max-width: 1000px) {
+  .hero p {
+    width: 75%;
+  }
+  .main .benefits {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main .benefits .benefit-card {
+    -webkit-transform: none !important;
+            transform: none !important;
+    max-width: 80vw !important;
+    margin-bottom: 1rem;
+  }
+  .main .claim-monke p {
+    width: 80vw !important;
+  }
+  .main .claim-monke .claim-box {
+    width: 80vw !important;
+  }
+}
+
 @font-face {
   font-family: BebasNeue;
   src: url(BebasNeue-Regular.ttf);
@@ -304,6 +331,12 @@ nav .logo span {
   margin-left: 1rem;
 }
 
+nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 nav .nav-links a {
   margin-right: 1rem;
   text-decoration: none;
@@ -393,7 +426,6 @@ button:disabled:hover {
   position: absolute;
   height: 100vh;
   overflow: hidden;
-  width: 4%;
 }
 
 .slide-container .monkestrip {
@@ -479,21 +511,6 @@ button:disabled:hover {
 .main .benefits .rightcard {
   -webkit-transform: perspective(800px) rotateY(-20deg) rotateX(2.5deg);
           transform: perspective(800px) rotateY(-20deg) rotateX(2.5deg);
-}
-
-.main .airdrop {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 2rem;
 }
 
 .main .claim-monke {
