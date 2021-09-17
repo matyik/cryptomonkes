@@ -188,7 +188,7 @@ export default function Home() {
                 this 1 of 1 Return to Monke NFT.
               </li>
               <li>
-                The first 5 wallets to own 5 Monkes will receive a something.
+                The first 5 wallets to own 5 Monkes will receive a Caogan NFT.
               </li>
             </ul>
           </div>
@@ -256,7 +256,7 @@ export default function Home() {
           </div>
         </div>
         <footer>
-          Created by <a href='http://matyi.pro'>Matyi Kari</a>
+          Created by <a href='http://matyi.tech'>Matyi Kari</a>
         </footer>
       </div>
     </>
