@@ -2,7 +2,7 @@ import axios from 'axios'
 export default async function handler(req, res) {
   let status
   if (req.method === 'POST') {
-    if (Date.now() > Date.parse('25 Sept 2021 15:00:00 MDT')) {
+    if (Date.now() > Date.parse('9 Oct 2021 15:00:00 MDT')) {
       try {
         const res = await axios.post(
           `https://discord.com/api/webhooks/${process.env.WEBHOOK_URL}`,

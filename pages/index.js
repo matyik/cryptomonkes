@@ -155,7 +155,7 @@ export default function Home() {
         </p>
         <Countdown
           className='countdown'
-          date={Date.parse('25 Sept 2021 15:00:00 MDT')}>
+          date={Date.parse('9 Oct 2021 15:00:00 MDT')}>
           <Completionist />
         </Countdown>
       </div>
@@ -204,8 +204,8 @@ export default function Home() {
             secondary market.
           </p>
           <div className='claim-box'>
-            {Date.now() < Date.parse('25 Sept 2021 15:00:00 MDT') ? (
-              'Claiming Starts September 25th'
+            {Date.now() < Date.parse('9 Oct 2021 15:00:00 MDT') ? (
+              'Claiming Starts October 9th'
             ) : (
               <>
                 <h3>Step 1</h3>
