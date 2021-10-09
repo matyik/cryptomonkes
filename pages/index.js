@@ -184,8 +184,11 @@ export default function Home() {
             <h3>NFT Airdrops</h3>
             <ul>
               <li>
-                Once all 1,000 Monkes are claimed, a random Monke owner will win
-                this 1 of 1 Return to Monke NFT.
+                Once all 1,000 Monkes are claimed, a random Monke owner will win{' '}
+                <a href='https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/95887810306434103298775717459816541535346390024696977889815916933460537638913'>
+                  Acid Junkie #008
+                </a>
+                .
               </li>
               <li>
                 The first 5 wallets to own 5 Monkes will receive a Caogan NFT.
@@ -200,8 +203,8 @@ export default function Home() {
             Monkes can be claimed for free. To claim, connect your wallet and
             click &quot;Claim&quot;. You can enter your email, which will be
             used to notify you when you are verified and your Monke has been
-            transferred. After they are claimed, they can be sold on the
-            secondary market.
+            transferred. It may take up to 2 weeks to transfer. After they are
+            claimed, they can be sold on the secondary market.
           </p>
           <div className='claim-box'>
             {Date.now() < Date.parse('9 Oct 2021 15:00:00 MDT') ? (
