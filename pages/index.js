@@ -86,8 +86,9 @@ export default function Home() {
         <meta
           name='description'
           content='A collection of 1,000 unique, 1 of 1, randomly generated Monkes on the
-          Polygon network. Return to monke and claim one for free on September 25th!'
+          Polygon network. Return to monke and claim one for free on October 9th!'
         />
+        <meta name='author' content='Matyi Kari'></meta>
       </Head>
       <nav>
         <span className='logo'>
