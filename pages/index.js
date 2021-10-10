@@ -208,26 +208,9 @@ export default function Home() {
             claimed, they can be sold on the secondary market.
           </p>
           <div className='claim-box'>
-            {Date.now() < Date.parse('9 Oct 2021 15:00:00 MDT') ? (
-              'Claiming Starts October 9th'
-            ) : (
-              <>
-                <h3>Step 1</h3>
-                <button disabled={wallet} onClick={connectMetamask}>
-                  {wallet ? wallet : 'Connect Wallet'}
-                </button>
-                <h3>Step 2</h3>
-                <input
-                  type='email'
-                  placeholder='Email Address (optional)'
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <button disabled={claimed === 'true'} onClick={sendWallet}>
-                  Claim Monke
-                </button>
-                <span className={`status ${status[1]}`}>{status[0]}</span>
-              </>
-            )}
+            {Date.now() < Date.parse('9 Oct 2021 15:00:00 MDT')
+              ? 'Claiming Starts October 9th'
+              : 'Claiming Period Is Over!'}
           </div>
           <div className='links'>
             <a href='https://discord.gg/fvN6meTF7d'>
